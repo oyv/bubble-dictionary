@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bubble Dictionary",
+  "description": "Bubble Dictionary",
+  "version": "0.4",
+  "permissions": 
+  [
+	"<all_urls>",
+	"storage",
+	"contextMenus",
+	"tabs"
+  ],
+  
+  "web_accessible_resources": 
+  [
+	"popup.html",
+	"popup.js",
+	"popup.css",
+	"jquery-2.0.3.js",
+	"close.png",
+	"disable.png"
+  ],
+  
+  "browser_action": 
+  {
+    "default_icon": "bookicon128.png",
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts": 
+  [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["injected.css"],
+      "js": ["jquery-2.0.3.js", "jquery.ba-bbq.js", "options.js", "injected.js"],
+	  "all_frames": true
+    }
+  ],
+  
+  "background":
+  {
+    "scripts": ["jquery-2.0.3.js", "sites.js", "background.js"]
+  },
+  
+  "options_page":"optionsPage.html"
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body
+	{
+		background-color:rgba(255,255,255,0.8);
+		margin:0px!important;
+		min-height:250px;
+	}
+	#bubbledictionary
+	{
+		background-color:white;
+		padding:18px!important;
+		min-width:419px;
+		float:left;
+	}
+	#toc
+	{
+		
+	
+	}
+	#bubbledictionarytitlecontainer *
+	{
+		margin:0px 0px 7px 0px!important;
+		padding:0px!important;
+		font-family:helvetica;
+		font-size:22px;
+		font-weight:bold;
+		border:none;
+		text-align:left!important;
+	}
+	#bubbledictionarytitle
+	{
+		cursor:pointer;
+		text-align:left;
+	}
+	#bubbledictionarywordinput
+	{
+		outline:0;
+		text-align:left;
+	}
+	.bubbledictionaryentry
+	{
+		margin:0;
+		text-align:left!important;
+		width:100%;
+	}
+	.bubbledictionaryentrylink
+	{
+		color:#336699;
+		text-decoration:none;
+		font-family:helvetica;
+		font-size:14px;
+		text-align:left!important;
+	}
+	.bubbledictionaryentryimport
+	{
+		display:none;
+		margin:8px;
+		
+	}
+	.bubbledictionaryentryimportshow, .bubbledictionaryentryimporthide
+	{
+		color:#996633;
+		cursor:pointer;
+		font-family:helvetica;
+		font-size:14px;
+		text-align:left!important;
+	}
+	.bubbledictionaryhr
+	{
+		width:100%;
+		border:0px;
+		height:1px;
+		background-color:black;
+		margin:4px 0;
+	}
+	#bubbledictionaryloadanimation
+	{
+		position:absolute;
+		top:100px;
+		right:30px;
+		/*z-index:-100;*/
+	}
+</style>
+<!--style type="text/css" src="chrome-extension://lccdponaancidbampihiebenhcmaioge/popup.css"></style-->
+<script type="text/javascript" src="chrome-extension://lccdponaancidbampihiebenhcmaioge/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="chrome-extension://giajlhmeeiimnmjoenghmkiecbimfeep/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="chrome-extension://gibjjfendmmhcfejbfpfcmjclgmiiell/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="chrome-extension://kgohdpbkcomhncflijkcokkpnleldaja/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="chrome-extension://bicbfljahadcaiafcpbgnhiefafgnlpb/jquery-2.0.3.js"></script>
+
+<title></title>
+<body>
+
+<div id="toc">
+
+</div>
+
+<div id="bubbledictionary">
+	<div id="bubbledictionarytitlecontainer">
+		<h2 id="bubbledictionarytitle" class="bubbledictionarytitle" title="click to change" style="display:none"></h3>
+		<input id="bubbledictionarywordinput"/>
+	</div>
+	<img src="chrome-extension://lccdponaancidbampihiebenhcmaioge/load.gif" style="display:none;" id="bubbledictionaryloadanimation" />
+	<img src="chrome-extension://giajlhmeeiimnmjoenghmkiecbimfeep/load.gif" style="display:none;" id="bubbledictionaryloadanimation" />
+	<img src="chrome-extension://gibjjfendmmhcfejbfpfcmjclgmiiell/load.gif" style="display:none;" id="bubbledictionaryloadanimation" />
+	<img src="chrome-extension://kgohdpbkcomhncflijkcokkpnleldaja/load.gif" style="display:none;" id="bubbledictionaryloadanimation" />
+	<img src="chrome-extension://bicbfljahadcaiafcpbgnhiefafgnlpb/load.gif" style="display:none;" id="bubbledictionaryloadanimation" />
+	<div class="bubbledictionaryentry template" style="display:none;">
+		<a class="bubbledictionaryentrylink" target="_blank"><span class="bubbledictionaryentrylink"></span>&nbsp;&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFVJREFUeNpi/P//PwMMpM08geBgBwJMDCQCFnSBWekWjNgUAm3/ANZAhDNQAMhJH0Fuw2UyNg0MpNpAmacJ+YkFXwhBQ0YeKP6RYid9AJpGlAaAAAMAx2IanJ0wsjgAAAAASUVORK5CYII=" /></a>
+		<br />
+		<span class="bubbledictionaryentryimportshow">&nbsp;&nbsp;show</span>
+		<span class="bubbledictionaryentryimporthide" style="display:none;">&nbsp;&nbsp;hide</span>
+		<div class="bubbledictionaryentryimport"></div>
+		<hr class="bubbledictionaryhr" />
+	</div>
+</div>
+
+</body>
+
+<!--script type="text/javascript" src="chrome-extension://lccdponaancidbampihiebenhcmaioge/initialsites.js"></script>
+<script type="text/javascript" src="chrome-extension://giajlhmeeiimnmjoenghmkiecbimfeep/initialsites.js"></script>
+<script type="text/javascript" src="chrome-extension://gibjjfendmmhcfejbfpfcmjclgmiiell/initialsites.js"></script-->
+<script type="text/javascript" src="chrome-extension://lccdponaancidbampihiebenhcmaioge/sites.js"></script>
+<script type="text/javascript" src="chrome-extension://giajlhmeeiimnmjoenghmkiecbimfeep/sites.js"></script>
+<script type="text/javascript" src="chrome-extension://gibjjfendmmhcfejbfpfcmjclgmiiell/sites.js"></script>
+<script type="text/javascript" src="chrome-extension://kgohdpbkcomhncflijkcokkpnleldaja/sites.js"></script>
+<script type="text/javascript" src="chrome-extension://bicbfljahadcaiafcpbgnhiefafgnlpb/sites.js"></script>
+
+<script type="text/javascript" src="chrome-extension://lccdponaancidbampihiebenhcmaioge/options.js"></script>
+<script type="text/javascript" src="chrome-extension://giajlhmeeiimnmjoenghmkiecbimfeep/options.js"></script>
+<script type="text/javascript" src="chrome-extension://gibjjfendmmhcfejbfpfcmjclgmiiell/options.js"></script>
+<script type="text/javascript" src="chrome-extension://kgohdpbkcomhncflijkcokkpnleldaja/options.js"></script>
+<script type="text/javascript" src="chrome-extension://bicbfljahadcaiafcpbgnhiefafgnlpb/options.js"></script>
+
+
+<script type="text/javascript" src="chrome-extension://lccdponaancidbampihiebenhcmaioge/popup2.js"></script>
+<script type="text/javascript" src="chrome-extension://giajlhmeeiimnmjoenghmkiecbimfeep/popup2.js"></script>
+<script type="text/javascript" src="chrome-extension://gibjjfendmmhcfejbfpfcmjclgmiiell/popup2.js"></script>
+<script type="text/javascript" src="chrome-extension://kgohdpbkcomhncflijkcokkpnleldaja/popup2.js"></script>
+<script type="text/javascript" src="chrome-extension://bicbfljahadcaiafcpbgnhiefafgnlpb/popup2.js"></script>
+
+</html>
+
+

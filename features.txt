@@ -1,0 +1,9 @@
+features to add:
+
+- legge til egne linker og imports
+- mulighet for at noen imports alltid åpner seg.
+- bredde?
+| tall for å åpne imports
+- språk
+
+| velge hvilke linker og imports som skal vises.

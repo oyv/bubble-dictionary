@@ -1,0 +1,33 @@
+body
+{
+	background-color:white;
+}
+
+#bubbledictionary
+{
+	background-color:white;
+	padding:10px;
+	width:400px;
+	float:left;
+}
+#bubbledictionarytitle
+{
+	
+}
+.bubbledictionaryentry
+{
+
+}
+.bubbledictionaryentrylink
+{
+	color:#336699;
+}
+.bubbledictionaryentryimport
+{
+	display:none;
+}
+.bubbledictionaryentryimportshow
+{
+	color:#996633;
+	cursor:pointer
+}
