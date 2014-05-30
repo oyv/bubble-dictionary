@@ -48,7 +48,7 @@ function updateSizeRaw(height, width)
 	{
 		//console.log("updating width")
 		getIFrame().width(width)
-		getBubble().css("max-width",(width)+"px")
+		getBubble().css("max-width",(width+2)+"px")
 		sendMessage("updateWidth", {width:width})
 	}
 }
