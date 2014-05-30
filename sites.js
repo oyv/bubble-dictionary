@@ -56,10 +56,10 @@ initialSites =
 		filterContents:true,
 		showElements:
 		[
-			{type:"class", value:"word", index:0},
-			{type:"class", value:"pron", index:0},
-			{type:"class", value:"snd", index:0},
-			{type:"selector", value:".result:not(#hider *)"},
+			{type:"class", value:"header", index:0},
+			{type:"class", value:"pbk"},
+			// {type:"class", value:"snd", index:0},
+			// {type:"selector", value:".result:not(#hider *)"},
 		]
 	},
 	translate_google_en:
@@ -517,12 +517,14 @@ function loadSites()
 				throw "undefined sites"
 			}
 			sites = new Sites(siteinfo)
+			// sites = new Sites(initialSites)
 		}
 		catch(e)
 		{
 			sites = new Sites(initialSites)
 			saveSites()
 		}
+		var siteInitializer = 
 		console.log("sites:")
 		console.log(sites)
 		sitesReady = true
