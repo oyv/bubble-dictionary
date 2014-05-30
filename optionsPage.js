@@ -110,6 +110,11 @@ Option.prototype.deleteClick = function(event)
 	//console.log(this)
 	var option = getOption($(this))
 	delete sites[option.id]
+	for (i in sites.idList)
+	{
+		if (sites.idList[i] == option.id)
+			sites.idList.splice(i, i+1)
+	}
 	saveSites()
 	option.jqElement.remove()
 }
