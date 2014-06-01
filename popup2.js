@@ -207,6 +207,10 @@ $("#bubbledictionarywordinput").blur(function(event)
 {
 	titleInputBlur()
 })
+
+$("#bubbledictionarywordinput").focus(function(event)
+{
+	titleInputFocus()
 })
 
 $("#bubbledictionarywordinput").keydown(function inputKeypressHandler(event)
