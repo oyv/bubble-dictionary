@@ -184,21 +184,29 @@ window.addEventListener("message", function(event)
 	}
 }, false);
 
-
-$("#bubbledictionarytitle").click(function(event)
+function titleInputFocus()
 {
 	$("#bubbledictionarytitle").hide()
 	$("#bubbledictionarywordinput").show()
 	$("#bubbledictionarywordinput").select()
-	
-	
-})
+}
 
-$("#bubbledictionarywordinput").blur(function(event)
+function titleInputBlur()
 {
 	$("#bubbledictionarytitle").show()
 	$("#bubbledictionarywordinput").hide()
 	updateWord($("#bubbledictionarywordinput").val())
+}
+
+$("#bubbledictionarytitle").click(function(event)
+{
+	titleInputFocus()
+})
+
+$("#bubbledictionarywordinput").blur(function(event)
+{
+	titleInputBlur()
+})
 })
 
 $("#bubbledictionarywordinput").keydown(function inputKeypressHandler(event)
