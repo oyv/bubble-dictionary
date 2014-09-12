@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-	body
-	{
-		max-width:600px;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:40px;
-		margin-bottom:40px;
-		border:2px solid black;
-		border-radius:8px;
-	}
-	#bubbledictionaryoptions
-	{
-		padding:10px;
-		margin:10px;
-	}
-	.optionsection
-	{
-		margin-bottom:5px
-	}
-	.option
-	{
-		margin:3px;
-	}
-	.option:nth-of-type(2n-1)
-	{
-		background-color:#DDDDDD;
-	}
-	.option:nth-of-type(2n)
-	{
-		background-color:#FFFFFF;
-	}
-	.option input
-	{
-		width:200px;
-		margin:0px 50px;	
-		padding:0px;
-	}
-	.hotkeyInput
-	{
-		border:1px solid black;
-	}
-	.binaryInput
-	{
-		width:202px !important;
-	}
-	#optionsTitle
-	{
-		margin: 20px auto;
-		text-align:center;
-	}
-	.deletesite
-	{
-		cursor:pointer;
-		text-decoration:underline;
-	}
-	
+    body
+    {
+        max-width:600px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:40px;
+        margin-bottom:40px;
+        border:2px solid black;
+        border-radius:8px;
+    }
+    #bubbledictionaryoptions
+    {
+        padding:10px;
+        margin:10px;
+    }
+    .optionsection
+    {
+        margin-bottom:5px
+    }
+    .option
+    {
+        margin:3px;
+    }
+    .option:nth-of-type(2n-1)
+    {
+        background-color:#DDDDDD;
+    }
+    .option:nth-of-type(2n)
+    {
+        background-color:#FFFFFF;
+    }
+    .option input
+    {
+        width:200px;
+        margin:0px 50px;    
+        padding:0px;
+    }
+    .hotkeyInput
+    {
+        border:1px solid black;
+    }
+    .binaryInput
+    {
+        width:202px !important;
+    }
+    #optionsTitle
+    {
+        margin: 20px auto;
+        text-align:center;
+    }
+    .deletesite
+    {
+        cursor:pointer;
+        text-decoration:underline;
+    }
+    
 </style>
 
 
@@ -66,29 +66,29 @@
 <body>
 
 <div id="bubbledictionaryoptions">
-	<h2 id="optionsTitle">Bubble Dictionary Preferences</h2>
+    <h2 id="optionsTitle">Bubble Dictionary Preferences</h2>
 
-	<div class="optionsection regular" id="options">
-		<h3>General Options</h3>
-		<div class="option regular binary template" style="display:none;" >
-			<input type="checkbox" class="binaryInput" />
-			<label class="optionname" />
-		</div>
-		<div class="option regular hotkey template" style="display:none;" >
-			<input type="text" class="hotkeyInput" />
-			<label class="optionname" />
-		</div>
-		<button id="resetSites">Reset Sites</button>
-		<button id="resetOptions">Reset Options</button>
-	</div>
-	<div class="optionsection siteenable" id="sites">
-		<h3>Sites</h3>
-		<div class="option siteenable binary template" style="display:none;" >
-			<input type="checkbox" class="binaryInput" />
-			<label class="optionname"></label>
-			<span class="deletesite"> delete</span>
-		</div>
-	</div>
+    <div class="optionsection regular" id="options">
+        <h3>General Options</h3>
+        <div class="option regular binary template" style="display:none;" >
+            <input type="checkbox" class="binaryInput" />
+            <label class="optionname" />
+        </div>
+        <div class="option regular hotkey template" style="display:none;" >
+            <input type="text" class="hotkeyInput" />
+            <label class="optionname" />
+        </div>
+        <button id="resetSites">Reset Sites</button>
+        <button id="resetOptions">Reset Options</button>
+    </div>
+    <div class="optionsection siteenable" id="sites">
+        <h3>Sites</h3>
+        <div class="option siteenable binary template" style="display:none;" >
+            <input type="checkbox" class="binaryInput" />
+            <label class="optionname"></label>
+            <span class="deletesite"> delete</span>
+        </div>
+    </div>
 </div>
 </body>
 

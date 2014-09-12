@@ -6,20 +6,20 @@
   "version": "0.4",
   "permissions": 
   [
-	"<all_urls>",
-	"storage",
-	"contextMenus",
-	"tabs"
+    "<all_urls>",
+    "storage",
+    "contextMenus",
+    "tabs"
   ],
   
   "web_accessible_resources": 
   [
-	"popup.html",
-	"popup.js",
-	"popup.css",
-	"jquery-2.0.3.js",
-	"close.png",
-	"disable.png"
+    "popup.html",
+    "popup.js",
+    "popup.css",
+    "jquery-2.0.3.js",
+    "close.png",
+    "disable.png"
   ],
   
   "browser_action": 
@@ -34,7 +34,7 @@
       "matches": ["<all_urls>"],
       "css": ["injected.css"],
       "js": ["jquery-2.0.3.js", "jquery.ba-bbq.js", "options.js", "injected.js"],
-	  "all_frames": true
+      "all_frames": true
     }
   ],
   
