@@ -5,6 +5,8 @@ vars =
 	enabled:true
 }
 
+var defaultWidth = 455
+
 $("body").mouseup(
 	function(e)
 	{
@@ -34,22 +36,33 @@ function getOption(id)
 
 function updateSize()
 {
-	updateSizeRaw(window.innerHeight-61)
+	updateSizeRaw(window.innerHeight-61, defaultWidth)
+}
+
+
+function updateHeight(height)
+{
+    //console.log("updating height")
+    getIFrame().height(height)
+}
+
+function updateWidth(width)
+{
+    //console.log("updating width")
+    getIFrame().width(width)
+    getBubble().css("max-width",(width+2)+"px")
+    sendMessage("updateWidth", {width:width})
 }
 
 function updateSizeRaw(height, width)
 {
 	if (height)
 	{
-		//console.log("updating height")
-		getIFrame().height(height)
+        updateHeight(height)
 	}
 	if (width)
 	{
-		//console.log("updating width")
-		getIFrame().width(width)
-		getBubble().css("max-width",(width+2)+"px")
-		sendMessage("updateWidth", {width:width})
+        updateWidth(width)
 	}
 }
 
@@ -356,7 +369,7 @@ window.addEventListener("message", function(event)
 	switch (key)
 	{
 	case "scrollWidth":
-		var newSize = Math.max(data.scrollWidth, 455)
+		var newSize = Math.max(data.scrollWidth, defaultWidth)
 		//console.log("updating to size "+newSize)
 		updateSizeRaw(false, newSize)
 		break;

@@ -126,9 +126,16 @@ function getScrollbarWidth() {
     return widthNoScroll - widthWithScroll;
 }
 
+var _verticalScrollBarIsPresent = false
+
 function verticalScrollBarIsPresent()
 {
-	return (document.body.scrollHeight>document.body.clientHeight);
+    
+    var scrollHeight = document.body.scrollHeight
+    var bodyHeight = document.body.clientHeight
+    _verticalScrollBarIsPresent = _verticalScrollBarIsPresent || (scrollHeight > bodyHeight)
+    
+    return (_verticalScrollBarIsPresent);
 }
 
 function triggerSizeUpdate()

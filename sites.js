@@ -399,14 +399,11 @@ Site.prototype.populateImport = function(importContent)
 
 Site.prototype.doImport = function()
 {
-	if (!this.imported)
-	{
-		//$("#bubbledictionaryloadanimation").show()
-		//console.log("importing...")
-		var owner = this
-		this.getImportContent(function(data){owner.populateImport(owner.siftImportContent(data))})
-		// this.domObject.show()
-	}
+    //$("#bubbledictionaryloadanimation").show()
+    //console.log("importing...")
+    var owner = this
+    this.getImportContent(function(data){owner.populateImport(owner.siftImportContent(data))})
+    // this.domObject.show()
 }
 
 Site.prototype.importshowclick = function()
@@ -417,10 +414,13 @@ Site.prototype.importshowclick = function()
 	////console.log(site)
 	site.importShowing = !site.importShowing
 	var mImport = getImportById(site.id)
-	mImport.toggle();
+	mImport.toggle(0, function(){triggerSizeUpdate()});
 	getImportShow(mImport).toggle(!site.importShowing)
 	getImportHide(mImport).toggle(site.importShowing)
-	site.doImport()
+	if (!this.imported)
+	{
+        site.doImport()
+    }
 }
 
 
