@@ -7,8 +7,9 @@
 	height: 625px;
 	width: 450px;*/
 	z-index: 100000;
+    margin:1px;
 	border-style:outset;
-	border-width:3px;
+	border-width:1px;
 	border-color:black;/*#336699;*/
 	border-radius:8px;
 	padding:1px;

@@ -86,7 +86,7 @@ function resize()
 function makeBubble(word)
 {
 	var framestring = 
-		'<div id="bubbledictionaryframe" style="opacity:0.90">\
+		'<div id="bubbledictionaryframe" style="opacity:0.60">\
 			<iframe id="bubbledictionaryiframe" name="bubbledictionaryiframe" seamless></iframe>\
 			<div id="bubbledictionaryresize" title="Resize pane to fit contents.">resize</div>\
 			<div id="bubbledictionarydisable" title="Temporarily disable, refresh page to reenable.">disable</div>\
@@ -96,14 +96,18 @@ function makeBubble(word)
 	
 	frame.mouseleave(function () 
 	{
-		frame.css("opacity", "0.90")
-		updateSizeRaw(false, 455)
+		frame.css("opacity", "0.60")
+        frame.css("border-width", "1px")
+        frame.css("margin", "1px")
+		//updateSizeRaw(false, defaultWidth)
 	});
 	frame.mouseenter(function () 
 	{
 		//console.log("mouseenter")
 		//console.log(getIFrame())
 		frame.css("opacity", "1")
+        frame.css("border-width", "2px")
+        frame.css("margin", "0px")
 		//resize()
 	});
 	
